@@ -1,0 +1,13 @@
+{% load static %}
+{% block content %}
+<html>
+    <body>
+        <div class="col-xl-10 p-xl-10 pt-xl-5 offset-md-4" text-align="center;">
+            <button class="btn btn-success" style="border-radius:50px;" ><a href="{% url 'seating_chart_webpage' %}">Seating Chart</a></button>
+            <button class="btn btn-success" style="border-radius:30px;" ><a href="{% static 'images/Roster.pdf' %}">Roster (Alphabetical)</a></button>
+            <button class="btn btn-success" style="border-radius:30px;" ><a href="{% static 'images/Roster2.pdf' %}">Roster (Seating Order)</a></button>
+        </div>
+    </body>
+    <img src="{% static 'images/images.jpeg' %}" alt="Random Picture">
+</html>
+{% endblock %}

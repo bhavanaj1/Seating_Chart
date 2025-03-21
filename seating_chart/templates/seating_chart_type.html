@@ -1,0 +1,49 @@
+
+{% block content %}
+    <html lang = "en">
+        <head>
+            <title>Seating Chart</title>
+        </head>
+
+        <body>
+            <p></p>
+            <p></p>
+            <div class="col-xl-4 p-xl-10 pt-xl-3 offset-md-4" width= "100%">
+                <form style="font-family: 'Roboto slab', serif;" method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_file">Names of Students: </label>
+                        {{ form.file }}
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="id_desk_in_row">Number of Rows: </label>
+                        {{ form.desk_in_row }}
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="id_desk_in_column">Number of Columns: </label>
+                        {{ form.desk_in_column }}
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="id_num_section">Number of Groups: </label>
+                        {{ form.num_section }}
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="id_shuffle">Shuffle: </label>
+                        {{ form.shuffle }}
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-outline-success" style="border-radius:30px;">Submit</button>
+                    <br><br>
+                    <small>Note: Each desk holds two people. Computer view is recommended</small>
+                </form>
+            </div>
+        </body>
+    </html>
+{% endblock %}
+
+
+
